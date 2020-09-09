@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>461379101466-kp3o3v7l48a82fbetm4nsv5olqblrla7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.461379101466-kp3o3v7l48a82fbetm4nsv5olqblrla7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDZvAPvDd_qZF4L2Hf1rTTSZvLX0P0zdKY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>461379101466</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.alrawnaq</string>
+	<key>PROJECT_ID</key>
+	<string>al-rawnaq-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>al-rawnaq-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:461379101466:ios:0566f156cd2c1545bdc2a3</string>
+	<key>DATABASE_URL</key>
+	<string>https://al-rawnaq-app.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+framework module Pods_StationaryApp {
+  umbrella header "Pods-StationaryApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

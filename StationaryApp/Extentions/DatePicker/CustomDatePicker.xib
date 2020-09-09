@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MontserratAlternates-SemiBold.otf">
+            <string>MontserratAlternates-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomDatePicker" customModule="HeyHang" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="244"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTI-hZ-Dud">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0f-dk-GTa">
+                            <rect key="frame" x="220" y="0.0" width="100" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="tOK-Ys-xky"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="MontserratAlternates-SemiBold" family="Montserrat Alternates" pointSize="17"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1656585038" green="0.7345102429" blue="0.91810148950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="I0f-dk-GTa" firstAttribute="top" secondItem="iTI-hZ-Dud" secondAttribute="top" id="CMw-Sn-we2"/>
+                        <constraint firstAttribute="height" constant="44" id="MpY-aP-ddu"/>
+                        <constraint firstAttribute="trailing" secondItem="I0f-dk-GTa" secondAttribute="trailing" id="Ntf-ai-oGX"/>
+                        <constraint firstAttribute="bottom" secondItem="I0f-dk-GTa" secondAttribute="bottom" id="UCJ-Qg-Ptk"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Psr-I7-jMR">
+                    <rect key="frame" x="0.0" y="44" width="320" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="fqb-6B-rVl"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="561292748.41359699">
+                        <!--2018-10-15 10:39:08 +0000-->
+                    </date>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iTI-hZ-Dud" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dhw-ct-zm8"/>
+                <constraint firstItem="Psr-I7-jMR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Rbb-en-Sln"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iTI-hZ-Dud" secondAttribute="trailing" id="S9j-fw-BTI"/>
+                <constraint firstItem="iTI-hZ-Dud" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="aep-Q5-HKc"/>
+                <constraint firstItem="Psr-I7-jMR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bva-6P-mV0"/>
+                <constraint firstItem="Psr-I7-jMR" firstAttribute="top" secondItem="iTI-hZ-Dud" secondAttribute="bottom" id="uh7-4J-sBa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="datePicker" destination="Psr-I7-jMR" id="Gpz-bB-AEN"/>
+                <outlet property="datePickerHeader" destination="iTI-hZ-Dud" id="aYE-ec-tRN"/>
+                <outlet property="doneBtn" destination="I0f-dk-GTa" id="S9F-vX-vrI"/>
+            </connections>
+            <point key="canvasLocation" x="-703" y="-74"/>
+        </view>
+    </objects>
+</document>
