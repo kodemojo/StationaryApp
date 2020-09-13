@@ -10,7 +10,7 @@
 		4B83088325012B7D00990E7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B83088225012B7D00990E7F /* GoogleService-Info.plist */; };
 		4BD86B9224F50D9B00839780 /* QpayPayment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD86B9024F50D9500839780 /* QpayPayment.framework */; };
 		4BD86B9324F50D9B00839780 /* QpayPayment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD86B9024F50D9500839780 /* QpayPayment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7EFC325EC8B0EB677CE7E8B5 /* Pods_StationaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734A44128A68887410998D39 /* Pods_StationaryApp.framework */; };
+		69BD8CC71953A88AB6BE4031 /* Pods_StationaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B832E7A6CE9D1FDA9CABFB5B /* Pods_StationaryApp.framework */; };
 		8401560E24A0B1590080F340 /* ReviewTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401560C24A0B1590080F340 /* ReviewTblCell.swift */; };
 		8401560F24A0B1590080F340 /* ReviewTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8401560D24A0B1590080F340 /* ReviewTblCell.xib */; };
 		8401561124A0BCFF0080F340 /* AddReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401561024A0BCFF0080F340 /* AddReviewVC.swift */; };
@@ -138,9 +138,9 @@
 
 /* Begin PBXFileReference section */
 		33BB82DA32931DC4FFB4E768 /* Pods-StationaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationaryApp.debug.xcconfig"; path = "Target Support Files/Pods-StationaryApp/Pods-StationaryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4B3291B9250DDAD2002A6433 /* Al Rawnaq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Al Rawnaq.entitlements"; sourceTree = "<group>"; };
 		4B83088225012B7D00990E7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4BD86B9024F50D9500839780 /* QpayPayment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QpayPayment.framework; sourceTree = "<group>"; };
-		734A44128A68887410998D39 /* Pods_StationaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StationaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8401560C24A0B1590080F340 /* ReviewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTblCell.swift; sourceTree = "<group>"; };
 		8401560D24A0B1590080F340 /* ReviewTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTblCell.xib; sourceTree = "<group>"; };
 		8401561024A0BCFF0080F340 /* AddReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewVC.swift; sourceTree = "<group>"; };
@@ -253,6 +253,7 @@
 		84FE63F624C86BC90040C9FF /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		84FE63F824C86BD60040C9FF /* applogoNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogoNew.png; sourceTree = "<group>"; };
 		ADD9C61DD4D1B5696934199E /* Pods-StationaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationaryApp.release.xcconfig"; path = "Target Support Files/Pods-StationaryApp/Pods-StationaryApp.release.xcconfig"; sourceTree = "<group>"; };
+		B832E7A6CE9D1FDA9CABFB5B /* Pods_StationaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StationaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0D0E3C23B6300100F7C72F /* BrandsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrandsVC.swift; path = StationaryApp/Controller/BrandsVC.swift; sourceTree = SOURCE_ROOT; };
 		EC0D0E3E23B6303D00F7C72F /* MyCartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,7 +265,7 @@
 			files = (
 				848AB26824A4A2A20014CE5B /* WebKit.framework in Frameworks */,
 				4BD86B9224F50D9B00839780 /* QpayPayment.framework in Frameworks */,
-				7EFC325EC8B0EB677CE7E8B5 /* Pods_StationaryApp.framework in Frameworks */,
+				69BD8CC71953A88AB6BE4031 /* Pods_StationaryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +453,7 @@
 		8490E17823A11CBD00DF537D /* StationaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B3291B9250DDAD2002A6433 /* Al Rawnaq.entitlements */,
 				84D33E3C24B4A8DF00AF7179 /* splash.png */,
 				84FE63F624C86BC90040C9FF /* background.jpg */,
 				84FE63F824C86BD60040C9FF /* applogoNew.png */,
@@ -582,7 +584,7 @@
 			children = (
 				4BD86B9024F50D9500839780 /* QpayPayment.framework */,
 				848AB26724A4A2A20014CE5B /* WebKit.framework */,
-				734A44128A68887410998D39 /* Pods_StationaryApp.framework */,
+				B832E7A6CE9D1FDA9CABFB5B /* Pods_StationaryApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -598,9 +600,9 @@
 				8490E17223A11CBD00DF537D /* Sources */,
 				8490E17323A11CBD00DF537D /* Frameworks */,
 				8490E17423A11CBD00DF537D /* Resources */,
-				90404F4F708C9F7F1FC090AD /* [CP] Embed Pods Frameworks */,
 				4B06F68F24F5032700FC32D3 /* Embed Frameworks */,
 				4B8308842501303700990E7F /* Run Script */,
+				3E776A1BD29085DF5D388B8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -688,6 +690,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E776A1BD29085DF5D388B8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StationaryApp/Pods-StationaryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StationaryApp/Pods-StationaryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StationaryApp/Pods-StationaryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4B8308842501303700990E7F /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -707,23 +726,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		90404F4F708C9F7F1FC090AD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StationaryApp/Pods-StationaryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-StationaryApp/Pods-StationaryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StationaryApp/Pods-StationaryApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		BE5080F1ACB43FD8817775B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -974,6 +976,7 @@
 			baseConfigurationReference = 33BB82DA32931DC4FFB4E768 /* Pods-StationaryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "StationaryApp/Al Rawnaq.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1007,6 +1010,7 @@
 			baseConfigurationReference = ADD9C61DD4D1B5696934199E /* Pods-StationaryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "StationaryApp/Al Rawnaq.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

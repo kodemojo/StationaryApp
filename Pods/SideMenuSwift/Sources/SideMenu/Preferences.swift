@@ -108,8 +108,14 @@ extension SideMenuController {
             /// The cache key for the first content view controller.
             public var defaultCacheKey: String?
 
+            /// The side menu should use content's supported orientations. Default is false.
+            public var shouldUseContentSupportedOrientations: Bool = false
+
             /// The supported orientations of side menu controller. Default is `.portrait`.
             public var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
+            
+            /// The side menu shouldAutorotate. Default is `true`.
+            public var shouldAutorotate: Bool = true
         }
 
         /// The basic configuration of side menu

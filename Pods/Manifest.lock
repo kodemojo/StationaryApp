@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - CHIPageControl/Aleppo (0.2)
-  - Cosmos (20.0.1)
+  - Cosmos (22.1.0)
   - Firebase (6.24.0):
     - Firebase/Core (= 6.24.0)
   - Firebase/Analytics (6.24.0):
@@ -101,12 +101,12 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.8)
   - Protobuf (3.12.0)
-  - SideMenuSwift (2.0.3)
+  - SideMenuSwift (2.0.5)
   - TPKeyboardAvoidingSwift (3.2)
   - TTTAttributedLabel (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (= 4.9.1)
   - CHIPageControl/Aleppo
   - Cosmos
   - Firebase
@@ -150,7 +150,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
-  Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   Firebase: b28e55c60efd98963cd9011fe2fac5a10c2ba124
   FirebaseAnalytics: 7386fc2176e3f93ad8ef34b5b1f2b33a891e4962
   FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
@@ -170,10 +170,10 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
-  SideMenuSwift: 5c2b1496544ce3f1f08f4dddf4810eaac49f543d
+  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
   TPKeyboardAvoidingSwift: ce1a75e0bc3af6b485f8bfa1d0a8320cfc565851
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 24968770e10c27a2d60d047dff19cd8c3f67d62d
+PODFILE CHECKSUM: 1361ef6780475c0879bfe5ffe23a5b2a02487152
 
 COCOAPODS: 1.9.1
