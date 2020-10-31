@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  StationaryApp
+
+  Created by Isac Joseph on 30/10/20.
+  Copyright © 2020 Admin. All rights reserved.
+*/
+
+"App will reintialize to new language"      = "App will reintialize to new language";

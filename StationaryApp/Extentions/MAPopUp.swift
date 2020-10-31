@@ -171,7 +171,7 @@ extension MAStatusPopUp {
         self.msgLbl?.font = UIFont.systemFont(ofSize: 15.0, weight: .semibold)
         self.msgLbl?.numberOfLines = 0
         if let text = text {
-            self.msgLbl?.text = text
+            self.msgLbl?.text = text.localized
         }
         self.addSubview(self.msgLbl!)
         self.addLabelConstraint(newView: self.msgLbl!)

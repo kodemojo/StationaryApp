@@ -87,11 +87,11 @@ extension UIViewController {
             print("Camera")
             self.getImageByCamera(picker: picker)
         }
-        let galleryAction = UIAlertAction(title: "Album", style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
+        let galleryAction = UIAlertAction(title: "Album".localized, style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in
             print("Album")
             self.getImageByPhotoStorage(picker: picker)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (result : UIAlertAction) -> Void in
+        let cancelAction = UIAlertAction(title: "Cancel".localized, style: UIAlertAction.Style.cancel) { (result : UIAlertAction) -> Void in
             print("No")
         }
         alertController.addAction(cameraAction)
@@ -112,7 +112,7 @@ extension UIViewController {
             present(picker,animated: true,completion: nil)
         }
         else{
-            SupportMethod.showAlertMessage(messageStr: "Device camera is not available")
+            SupportMethod.showAlertMessage(messageStr: "Device camera is not available".localized)
         }
     }
     func getImageByPhotoStorage(picker : UIImagePickerController){

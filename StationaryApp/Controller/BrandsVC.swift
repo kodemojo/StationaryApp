@@ -83,7 +83,7 @@ extension BrandsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCollectionReusableView", for: indexPath) as! HeaderCollectionReusableView
-        reusableview.headerLbl.text = headerArray[indexPath.section]
+        reusableview.headerLbl.text = headerArray[indexPath.section].localized
         return reusableview
     }
     

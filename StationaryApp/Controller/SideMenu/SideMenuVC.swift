@@ -41,6 +41,7 @@ class SideMenuVC: BaseViewController {
         imgArr.append(model(img: nil, name: "Terms & Conditions"))
         imgArr.append(model(img: nil, name: "About Us"))
         imgArr.append(model(img: nil, name: "Contact Us"))
+        imgArr.append(model(img: nil, name: "Change Language"))
         if isLogged {
             imgArr.append(model(img: nil, name: "Logout"))
         } else {
@@ -72,7 +73,7 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SideMenuCell.self), for: indexPath) as! SideMenuCell
         cell.img.image = imgArr[indexPath.row].img
         cell.name.text = imgArr[indexPath.row].name
-        if imgArr[indexPath.row].name == "Notificaiton" {
+        if imgArr[indexPath.row].name == "Notificaiton".localized {
             cell.bottomBorder.isHidden = false
         } else {
             cell.bottomBorder.isHidden = true
@@ -81,58 +82,61 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if imgArr[indexPath.row].name == "My Address" {
+        if imgArr[indexPath.row].name == "My Address".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: MyAddressVC.self)) as! MyAddressVC
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "My Order's" {
+        } else if imgArr[indexPath.row].name == "My Order's".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: MyOrderVC.self)) as! MyOrderVC
             vc.isMoveForRating = false
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "My Wishlist" {
+        } else if imgArr[indexPath.row].name == "My Wishlist".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: MyWishlistVC.self)) as! MyWishlistVC
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Brands" {
+        } else if imgArr[indexPath.row].name == "Brands".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: BrandsVC.self)) as! BrandsVC
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Deals" {
+        } else if imgArr[indexPath.row].name == "Deals".localized {
             self.sideMenuController?.hideMenu()
             self.delegate?.onChangeBottomMenu(menu: .deals)
-        } else if imgArr[indexPath.row].name == "Promocode / GiftVoucher's" {
+        } else if imgArr[indexPath.row].name == "Promocode / GiftVoucher's".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: PromocodeVC.self)) as! PromocodeVC
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Return Policy" {
+        } else if imgArr[indexPath.row].name == "Return Policy".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: StaticWebViewVC.self)) as! StaticWebViewVC
             vc.navigation = .returnPolicy
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Notificaiton" {
+        } else if imgArr[indexPath.row].name == "Notificaiton".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: NotificationVC.self)) as! NotificationVC
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Shipping Policy" {
+        } else if imgArr[indexPath.row].name == "Shipping Policy".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: StaticWebViewVC.self)) as! StaticWebViewVC
             vc.navigation = .shippingPolicy
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Warranty policy" {
+        } else if imgArr[indexPath.row].name == "Warranty policy".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: StaticWebViewVC.self)) as! StaticWebViewVC
             vc.navigation = .warrantyPolicy
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Privacy Policy" {
+        } else if imgArr[indexPath.row].name == "Privacy Policy".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: StaticWebViewVC.self)) as! StaticWebViewVC
             vc.navigation = .privacyPolicy
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Terms & Conditions" {
+        } else if imgArr[indexPath.row].name == "Terms & Conditions".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: StaticWebViewVC.self)) as! StaticWebViewVC
             vc.navigation = .termsConditon
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "About Us" {
+        } else if imgArr[indexPath.row].name == "About Us".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: StaticWebViewVC.self)) as! StaticWebViewVC
             vc.navigation = .aboutUs
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if imgArr[indexPath.row].name == "Contact Us" {
+        } else if imgArr[indexPath.row].name == "Contact Us".localized {
             let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: ContactUsVC.self)) as! ContactUsVC
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if (imgArr[indexPath.row].name == "Logout" || imgArr[indexPath.row].name == "Login") {
+        } else if (imgArr[indexPath.row].name == "Logout".localized || imgArr[indexPath.row].name == "Login".localized) {
             SupportMethod.cachedClearedData()
             self.navigationController?.popToRootViewController(animated: true)
+        } else if imgArr[indexPath.row].name == "Change Language".localized {
+            let vc = self.storyBoardMain().instantiateViewController(withIdentifier: String(describing: ChangeLanguageVC.self))
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

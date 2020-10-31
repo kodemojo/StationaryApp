@@ -14,8 +14,8 @@ class FilterVC: BaseViewController {
     @IBOutlet weak var leftTblView: UITableView!
     @IBOutlet weak var rightTblView: UITableView!
     
-    var leftArr = ["Category", "Color", "Price", "Brands", "Discount", "Offers"]
-    var rightArr = ["Desk Blotters", "Desk Calendar", "Stand Desk", "Items Desk", "Organizers Desk", "Sets Diaries and Organisers"]
+    var leftArr = ["Category".localized, "Color".localized, "Price".localized, "Brands".localized, "Discount".localized, "Offers".localized]
+    var rightArr = ["Desk Blotters".localized, "Desk Calendar".localized, "Stand Desk".localized, "Items Desk".localized, "Organizers Desk".localized, "Sets Diaries and Organisers".localized]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +78,7 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
         if tableView == leftTblView {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FilterLeftCell.self), for: indexPath) as! FilterLeftCell
             cell.parentView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1.0)
-            cell.name.text = leftArr[indexPath.row]
+            cell.name.text = leftArr[indexPath.row].localized
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FilterRightCell.self), for: indexPath) as! FilterRightCell
@@ -87,7 +87,7 @@ extension FilterVC: UITableViewDelegate, UITableViewDataSource {
             } else {
                 cell.img.image = ProjectImages.tick_unfill
             }
-            cell.name.text = rightArr[indexPath.row]
+            cell.name.text = rightArr[indexPath.row].localized
             return cell
         }
     }

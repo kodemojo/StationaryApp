@@ -46,15 +46,15 @@ class ProductCell: UICollectionViewCell {
         }
         self.sortDesc.textAlignment = .left
         self.sortDesc.text = product.name ?? ""
-        self.discountprice.text = "QAR: \(product.price ?? 0.0)"
+        self.discountprice.text = "\("QAR:".localized) \(product.price ?? 0.0)"
         self.actualPrice.isHidden = true
         self.strikeView.isHidden = true
         self.strikeView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.4)
         
         for object in product.custom_attributes {
             if object.attribute_code == "special_price" {
-                self.actualPrice.text = "QAR: \(product.price ?? 0.0)"
-                self.discountprice.text = "QAR: \(Double(object.value ?? "0.0") ?? 0.0)"
+                self.actualPrice.text = "\("QAR:".localized) \(product.price ?? 0.0)"
+                self.discountprice.text = "\("QAR:".localized) \(Double(object.value ?? "0.0") ?? 0.0)"
                 self.actualPrice.isHidden = false
                 self.strikeView.isHidden = false
                 return

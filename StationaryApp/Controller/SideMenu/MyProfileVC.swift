@@ -74,7 +74,7 @@ class MyProfileVC: BaseViewController {
         self.mobileTF.isEnabled = true
         //self.chooseImageBtn.isUserInteractionEnabled = true
         self.profileCameraIV.isHidden = false
-        self.savechangeBtn.setTitle("Save Profile", for: .normal)
+        self.savechangeBtn.setTitle("Save Profile".localized, for: .normal)
     }
     private func disableEditing() {
         self.isEdit = false
@@ -84,7 +84,7 @@ class MyProfileVC: BaseViewController {
         self.mobileTF.isEnabled = false
         //self.chooseImageBtn.isUserInteractionEnabled = false
         self.profileCameraIV.isHidden = true
-        self.savechangeBtn.setTitle("Edit Profile", for: .normal)
+        self.savechangeBtn.setTitle("Edit Profile".localized, for: .normal)
     }
 }
 

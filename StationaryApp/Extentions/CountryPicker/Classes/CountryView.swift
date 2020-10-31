@@ -83,8 +83,8 @@ class CountryView: NibLoadingView {
             }
         }
 
-        countryNameLabel.text = country.name
-        countryCodeLabel.text = country.phoneCode
+        countryNameLabel.text = country.name?.localized
+        countryCodeLabel.text = country.phoneCode?.localized
     }
     
 }

@@ -29,8 +29,8 @@ class DealsVC: BaseViewController {
         super.viewDidLoad()
         
         //self.setShadowinHeader(headershadowView: headershadowView)
-        productArr.append([Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg1),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2)])
-        productArr.append([Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg1),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2)])
+        productArr.append([Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg1),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2)])
+        productArr.append([Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg1),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2),Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2)])
     }
     
     override func viewWillLayoutSubviews() {
@@ -78,7 +78,7 @@ extension DealsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: DealCell.self)) as! DealCell
-        cell.name.text = colctnHeader[indexPath.row]
+        cell.name.text = colctnHeader[indexPath.row].localized
         cell.selectedData = productArr[indexPath.row]
         return cell
     }

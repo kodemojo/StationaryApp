@@ -85,13 +85,13 @@ class HomeVC: BaseViewController {
         self.brandArr.append("brand_t_5")
         self.brandArr.append("brand_t_6")
         
-        self.categoryArr.append(Category(id: 37, name: "Toys", imageStr: "cat_toy_gray"))
-        self.categoryArr.append(Category(id: 3, name: "Office", imageStr: "cat_office_gray"))
-        self.categoryArr.append(Category(id: 3, name: "School", imageStr: "cat_school_gray"))
-        self.categoryArr.append(Category(id: 35, name: "Kitchen", imageStr: "cat_kitchen_gray"))
-        self.categoryArr.append(Category(id: 70, name: "Occasions", imageStr: "cat_event_gray"))
-        self.categoryArr.append(Category(id: 41, name: "Home", imageStr: "cat_home_gray"))
-        self.categoryArr.append(Category(id: 37, name: "Art", imageStr: "cat_art_gray"))
+        self.categoryArr.append(Category(id: 37, name: "Toys".localized, imageStr: "cat_toy_gray"))
+        self.categoryArr.append(Category(id: 3, name: "Office".localized, imageStr: "cat_office_gray"))
+        self.categoryArr.append(Category(id: 3, name: "School".localized, imageStr: "cat_school_gray"))
+        self.categoryArr.append(Category(id: 35, name: "Kitchen".localized, imageStr: "cat_kitchen_gray"))
+        self.categoryArr.append(Category(id: 70, name: "Occasions".localized, imageStr: "cat_event_gray"))
+        self.categoryArr.append(Category(id: 41, name: "Home".localized, imageStr: "cat_home_gray"))
+        self.categoryArr.append(Category(id: 37, name: "Art".localized, imageStr: "cat_art_gray"))
         
         self.setupCollectionView()
         self.setupPagerView()
@@ -264,7 +264,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             return cell
         } else if collectionView == exploreCV {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ExploreCollCell.self), for: indexPath) as! ExploreCollCell
-            cell.nameLbl.text = self.exploreArr[indexPath.row].name ?? ""
+            cell.nameLbl.text = self.exploreArr[indexPath.row].name?.localized ?? ""
             cell.iconIV?.imageFromServerURL(self.exploreArr[indexPath.row].image ?? "", placeHolder: UIImage(named: "logo"))
             
             cell.leadingLbl.setHorizontalDottedLine(color: UIColor.lightGray.withAlphaComponent(0.6))
@@ -471,12 +471,12 @@ extension UIViewController {
     
     func showLoginAlert(completion: @escaping(_ isLogin: Bool) -> ()) {
         let alertController = UIAlertController(title: Constant.APP_NAME, message: Alert.doLoginMessage, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: { (action) in
             alertController.dismiss(animated: true, completion: {
                 completion(false)
             })
         }))
-        alertController.addAction(UIAlertAction(title: "Login", style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction(title: "Login".localized, style: .default, handler: { (action) in
             alertController.dismiss(animated: true, completion: {
                 completion(true)
             })

@@ -13,7 +13,7 @@ extension UICollectionView {
     func showBackgroundMsg(msg : String)  {
         
         let label = UILabel(frame: self.bounds)
-        label.text = msg
+        label.text = msg.localized
         label.font = UIFont.systemFont(ofSize: 20.0, weight: .semibold)
         label.textColor = UIColor.darkGray
         label.textAlignment = .center
@@ -23,7 +23,7 @@ extension UICollectionView {
     func showBackgroundSmallMsg(msg : String)  {
         
         let label = UILabel(frame: self.bounds)
-        label.text = msg
+        label.text = msg.localized
         label.font = UIFont.systemFont(ofSize: 12.0, weight: .semibold)
         label.textColor = UIColor.darkGray
         label.textAlignment = .center

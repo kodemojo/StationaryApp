@@ -23,15 +23,15 @@ class CategoryVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.categoryImageArr.append(Category(id: 37, name: "Toys", imageStr: "cat_toy_gray"))
-        self.categoryImageArr.append(Category(id: 3, name: "Office", imageStr: "cat_office_gray"))
-        self.categoryImageArr.append(Category(id: 3, name: "School", imageStr: "cat_school_gray"))
-        self.categoryImageArr.append(Category(id: 35, name: "Kitchen", imageStr: "cat_kitchen_gray"))
-        self.categoryImageArr.append(Category(id: 70, name: "Occasions", imageStr: "cat_event_gray"))
-        self.categoryImageArr.append(Category(id: 41, name: "Home", imageStr: "cat_home_gray"))
-        self.categoryImageArr.append(Category(id: 37, name: "Art", imageStr: "cat_art_gray"))
-        self.categoryImageArr.append(Category(id: 93, name: "Books", imageStr: "cat_books_gray"))
-        self.categoryImageArr.append(Category(id: 105, name: "Eid Al Adha", imageStr: "cat_eid_adha"))
+        self.categoryImageArr.append(Category(id: 37, name: "Toys".localized, imageStr: "cat_toy_gray"))
+        self.categoryImageArr.append(Category(id: 3, name: "Office".localized, imageStr: "cat_office_gray"))
+        self.categoryImageArr.append(Category(id: 3, name: "School".localized, imageStr: "cat_school_gray"))
+        self.categoryImageArr.append(Category(id: 35, name: "Kitchen".localized, imageStr: "cat_kitchen_gray"))
+        self.categoryImageArr.append(Category(id: 70, name: "Occasions".localized, imageStr: "cat_event_gray"))
+        self.categoryImageArr.append(Category(id: 41, name: "Home".localized, imageStr: "cat_home_gray"))
+        self.categoryImageArr.append(Category(id: 37, name: "Art".localized, imageStr: "cat_art_gray"))
+        self.categoryImageArr.append(Category(id: 93, name: "Books".localized, imageStr: "cat_books_gray"))
+        self.categoryImageArr.append(Category(id: 105, name: "Eid Al Adha".localized, imageStr: "cat_eid_adha"))
         
         self.setupCollectionView()
         
@@ -77,7 +77,7 @@ extension CategoryVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollCell", for: indexPath) as! CategoryCollCell
             cell.imageMainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
             cell.imageMainView.layer.cornerRadius = 30.0
-            cell.nameLbl.text = self.mainCategory[indexPath.row].name ?? ""
+            cell.nameLbl.text = self.mainCategory[indexPath.row].name?.localized ?? ""
             cell.iconIV.image = UIImage(named: "logo")
             
             if let image = self.categoryImageArr.filter({ $0.id == self.mainCategory[indexPath.row].id }).first?.image {
@@ -102,7 +102,7 @@ extension CategoryVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             return cell
         } else if collectionView == subCategoryCV {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ExploreCollCell.self), for: indexPath) as! ExploreCollCell
-            cell.nameLbl.text = self.subCategory[indexPath.row].name ?? ""
+            cell.nameLbl.text = self.subCategory[indexPath.row].name?.localized ?? ""
             cell.iconIV?.imageFromServerURL(self.subCategory[indexPath.row].image ?? "", placeHolder: UIImage(named: "logo"))
             cell.leadingLbl.isHidden = true
             cell.bottomLbl.isHidden = true

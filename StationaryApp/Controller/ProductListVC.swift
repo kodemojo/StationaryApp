@@ -55,7 +55,7 @@ class ProductListVC: BaseViewController {
                 break
             case .category, .subCategory:
                 if let categoryId = self.categoryId {
-                    self.hdrLbl.text = self.categoryName
+                    self.hdrLbl.text = self.categoryName?.localized
                     self.executeGetAllProductAPI(key: "category_id", value: "\((categoryId))", isPaging: false)
                 }
                 break
@@ -79,7 +79,7 @@ class ProductListVC: BaseViewController {
     }
     
     private func refreshCart() {
-        self.cartCountLbl.text = UserDefaults.standard.string(forKey: Constant.UserDefaultKeys.cartCount) ?? "0"
+        self.cartCountLbl.text = UserDefaults.standard.string(forKey: Constant.UserDefaultKeys.cartCount)?.localized ?? "0".localized
     }
     
     @IBAction func gridAct(_ sender: UIButton) {
@@ -123,32 +123,32 @@ class ProductListVC: BaseViewController {
 //MARK: - Sorting
 private extension ProductListVC {
     func showSortingAlert() {
-        let controller = UIAlertController(title: "Sort By", message: nil, preferredStyle: .alert)
-        controller.addAction(UIAlertAction(title: "Recently Added", style: .default, handler: { (action) in
+        let controller = UIAlertController(title: "Sort By".localized, message: nil, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Recently Added".localized, style: .default, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
             self.sortByRecentlyAdded()
         }))
-        controller.addAction(UIAlertAction(title: "Oldest to Newest", style: .default, handler: { (action) in
+        controller.addAction(UIAlertAction(title: "Oldest to Newest".localized, style: .default, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
             self.sortByOldestoNewest()
         }))
-        controller.addAction(UIAlertAction(title: "Price: Low to High", style: .default, handler: { (action) in
+        controller.addAction(UIAlertAction(title: "Price: Low to High".localized, style: .default, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
             self.sortByPrice(isLowToHight: true)
         }))
-        controller.addAction(UIAlertAction(title: "Price: High to Low", style: .default, handler: { (action) in
+        controller.addAction(UIAlertAction(title: "Price: High to Low".localized, style: .default, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
             self.sortByPrice(isLowToHight: false)
         }))
-        controller.addAction(UIAlertAction(title: "Name: A to Z", style: .default, handler: { (action) in
+        controller.addAction(UIAlertAction(title: "Name: A to Z".localized, style: .default, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
             self.sortByName(isAtoZ: true)
         }))
-        controller.addAction(UIAlertAction(title: "Name: Z to A", style: .default, handler: { (action) in
+        controller.addAction(UIAlertAction(title: "Name: Z to A".localized, style: .default, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
             self.sortByName(isAtoZ: false)
         }))
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+        let cancel = UIAlertAction(title: "Cancel".localized, style: .cancel, handler: { (action) in
             controller.dismiss(animated: true, completion: nil)
         })
         let tintColor = UIColor(red: 32/255.0, green: 108/255.0, blue: 181/255.0, alpha: 1.0)
@@ -257,7 +257,7 @@ extension ProductListVC {
         if !isPaging {
             self.productArr = []
             self.productListColctnView.reloadData()
-            self.totalProductLbl.text = "(\(self.productArr.count) Products)"
+            self.totalProductLbl.text = "(\(self.productArr.count) \("Products".localized))"
             self.showActivityIndicator(uiView: self.view)
         }
         RestAPI.shared.getProducts(pageNo: "\(self.pageNo)", key: key, value: value) { (response, message, errorCode) in
@@ -267,7 +267,7 @@ extension ProductListVC {
                     self.pageNo += 1
                     self.productArr += (response?.items ?? [])
                     self.productListColctnView.reloadData()
-                    self.totalProductLbl.text = "(\(self.productArr.count) Products)"
+                    self.totalProductLbl.text = "(\(self.productArr.count) \("Products".localized)))"
                 }
             }
         }

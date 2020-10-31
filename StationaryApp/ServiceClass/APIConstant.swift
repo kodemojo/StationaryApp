@@ -11,7 +11,11 @@ import Foundation
 struct APIConstant {
     //Main URL for all APIs
     static let websiteUrl               = "http://www.alrawnaqwebstore.com"
-    static let MainUrl                  = APIConstant.websiteUrl + "/rest/default/V1/"
+    
+    static var MainUrl: String {
+        return APIConstant.websiteUrl + "/rest/\(languageParameter)/V1/"
+    }
+    
     static let ImageMainUrl             = APIConstant.websiteUrl + "/pub/media/catalog/product/"
     static let ImageBannerMainUrl       = APIConstant.websiteUrl + "/pub/media/mageplaza/bannerslider/banner/image/"
     static let getCustomerToken         = "integration/customer/token"

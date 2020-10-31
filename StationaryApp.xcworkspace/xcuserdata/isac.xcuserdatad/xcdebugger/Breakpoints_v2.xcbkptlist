@@ -156,22 +156,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4AFB8A2C-9A6B-4254-8889-1E6928A7D4E4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StationaryApp/ServiceClass/RestAPI.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
-            landmarkName = "getCategories(params:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D837EEB4-6350-4616-83D7-D7F7E53FCCF3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -183,22 +167,6 @@
             endingLineNumber = "289"
             landmarkName = "getCategories(params:completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4B6886EF-0EEE-42BA-9627-9F6FADDA9FF3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StationaryApp/ServiceClass/RestAPI.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "headerAdminData"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -247,6 +215,54 @@
             endingLineNumber = "112"
             landmarkName = "getAdminToken(completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABED55AE-3F1C-409B-93FD-D99C8C37333D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StationaryApp/ServiceClass/RestAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
+            landmarkName = "getCategories123(params:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABED55AE-3F1C-409B-93FD-D99C8C37333D - 669f20425f41a4ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Al_Rawnaq.RestAPI.getCategories123(params: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;Al_Rawnaq.Category&gt;, Swift.String, Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "Al Rawnaq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/isac/Projects%20Documents/Projects%20Code%20Repo/StationaryApp/StationaryApp/ServiceClass/RestAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "369"
+                  endingLineNumber = "369"
+                  offsetFromSymbolStart = "3912">
+               </Location>
+               <Location
+                  uuid = "ABED55AE-3F1C-409B-93FD-D99C8C37333D - 7e938fbcda625c67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Al_Rawnaq.RestAPI.getCategories123(params: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;Al_Rawnaq.Category&gt;, Swift.String, Swift.Int) -&gt; ()) -&gt; ()"
+                  moduleName = "Al Rawnaq"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/isac/Projects%20Documents/Projects%20Code%20Repo/StationaryApp/StationaryApp/ServiceClass/RestAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "370"
+                  endingLineNumber = "370"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

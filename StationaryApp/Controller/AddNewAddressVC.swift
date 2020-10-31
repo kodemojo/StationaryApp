@@ -49,10 +49,10 @@ class AddNewAddressVC: BaseViewController {
             self.selectedAdd = allAddress.first
         }
         if let _ = self.selectedAdd {
-            self.hdrLbl.text = "Update Address"
+            self.hdrLbl.text = "Update Address".localized
             self.updateSelectedAddress()
         } else {
-            self.hdrLbl.text = "Add New Address"
+            self.hdrLbl.text = "Add New Address".localized
         }
     }
     

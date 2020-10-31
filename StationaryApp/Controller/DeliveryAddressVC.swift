@@ -83,15 +83,15 @@ class DeliveryAddressVC: BaseViewController {
         for object in items {
             totalPrice += ((object.price ?? 0) * (Double(object.qty ?? 0)))
         }
-        self.priceLbl.text = "QAR: \(totalPrice)" //Price (items) Amount
+        self.priceLbl.text = "\("QAR:".localized) \(totalPrice)" //Price (items) Amount
         totalPrice += deliveryAmount
         let count = items.count
-        self.priceFixedLbl.text = "Price (\(count) item\(count > 1 ? "s" : ""))"
-        self.totalAmountLbl.text = "QAR: \(totalPrice)" //Total Cart Amount
-        self.deliveryPriceLbl.text = "QAR: \(self.deliveryAmount)" //Delivery Charge
-        self.totalPayLbl.text = "QAR: \(totalPrice)" //Payable Amount
-        self.saveAmountLbl.text = "You will save QAR 0.00 on this order"
-        self.promoCodeBtn.setTitle("Promo Code", for: .normal)
+        self.priceFixedLbl.text = "\("Price".localized) (\(count) item\(count > 1 ? "s" : ""))"
+        self.totalAmountLbl.text = "\("\("QAR:".localized)".localized) \(totalPrice)" //Total Cart Amount
+        self.deliveryPriceLbl.text = "\("QAR:".localized) \(self.deliveryAmount)" //Delivery Charge
+        self.totalPayLbl.text = "\("QAR:".localized) \(totalPrice)" //Payable Amount
+        self.saveAmountLbl.text = "You will save QAR 0.00 on this order".localized
+        self.promoCodeBtn.setTitle("Promo Code".localized, for: .normal)
     }
     
     //MARK:-IBAction
@@ -120,7 +120,7 @@ class DeliveryAddressVC: BaseViewController {
         let selectedAdds = self.addresses.filter({ $0.isSelected ?? false })
         if selectedAdds.count > 0 {
             guard let billingAddress = selectedAdds.first,  let carrier_code = carrier_code, let method_code = method_code else {
-                self.showMAAlert(message: "Please choose shipping method", type: .success)
+                self.showMAAlert(message: "Please choose shipping method".localized, type: .success)
                 return
             }
             var innerParams: [String: Any] = [:]
@@ -129,7 +129,7 @@ class DeliveryAddressVC: BaseViewController {
             innerParams["shipping_method_code"] = method_code
             self.executeForShippingInformation(params: ["addressInformation" : innerParams])
         } else {
-            self.showMAAlert(message: "Please choose your address", type: .success)
+            self.showMAAlert(message: "Please choose your address".localized, type: .success)
         }
     }
     @IBAction func onClickShippingMethodBtn(_ sender: Any) {
@@ -269,7 +269,7 @@ private extension DeliveryAddressVC {
     func showCarriedMethod() {
         
         if carrierData.count > 0 {
-            let controller = UIAlertController(title: "Select Shipping Method", message: nil, preferredStyle: .actionSheet)
+            let controller = UIAlertController(title: "Select Shipping Method".localized, message: nil, preferredStyle: .actionSheet)
             for object in carrierData {
                 let carrier_title = object["method_title"] as? String ?? ""
                 let action = UIAlertAction(title: carrier_title, style: .default) { (action) in
@@ -286,7 +286,7 @@ private extension DeliveryAddressVC {
                 }
                 controller.addAction(action)
             }
-            let cancelA = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            let cancelA = UIAlertAction(title: "Cancel".localized, style: .cancel) { (action) in
             }
             controller.addAction(cancelA)
             self.present(controller, animated: true, completion: nil)

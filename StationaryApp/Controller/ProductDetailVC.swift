@@ -75,7 +75,7 @@ class ProductDetailVC: BaseViewController {
     }
     
     private func refreshCart() {
-        self.cartCountLbl.text = UserDefaults.standard.string(forKey: Constant.UserDefaultKeys.cartCount) ?? "0"
+        self.cartCountLbl.text = UserDefaults.standard.string(forKey: Constant.UserDefaultKeys.cartCount)?.localized ?? "0".localized
     }
     
     @IBAction func quantityMinusAct(_ sender: UIButton) {
@@ -171,9 +171,9 @@ class ProductDetailVC: BaseViewController {
         
         self.setBorder(viw: [quantityParentView], btn: [addToWishList], color: ProjectColor.borderGrayColor)
         
-        self.aboutProductArr.append(AboutProduct(title: "Product Detail", desc: "\(self.selectedProduct?.name ?? "")"))
-        self.aboutProductArr.append(AboutProduct(title: "Delivery", desc: "Please note that estimated delivery is 4-7 working days"))
-        self.aboutProductArr.append(AboutProduct(title: "Review", desc: "0 Reviews & Ratings"))
+        self.aboutProductArr.append(AboutProduct(title: "Product Detail".localized, desc: "\(self.selectedProduct?.name ?? "")"))
+        self.aboutProductArr.append(AboutProduct(title: "Delivery".localized, desc: "Please note that estimated delivery is 4-7 working days".localized))
+        self.aboutProductArr.append(AboutProduct(title: "Review".localized, desc: "0 Reviews & Ratings".localized))
         self.aboutProductTblView.reloadData()
         
         DispatchQueue.main.async {
@@ -198,8 +198,8 @@ extension ProductDetailVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AboutProductCell.self), for: indexPath) as! AboutProductCell
-        cell.desc.text = aboutProductArr[indexPath.row].desc
-        cell.titl.text = aboutProductArr[indexPath.row].title
+        cell.desc.text = aboutProductArr[indexPath.row].desc?.localized
+        cell.titl.text = aboutProductArr[indexPath.row].title?.localized
         cell.desc.textColor = UIColor.darkGray.withAlphaComponent(0.6)
         return cell
     }
@@ -364,7 +364,7 @@ extension ProductDetailVC {
         }
         self.productNameLbl.text = product.name ?? ""
         self.hdrLbl.text = product.name ?? ""
-        self.discountPriceLbl.text = "QAR: \(product.price ?? 0.0)"
+        self.discountPriceLbl.text = "\("QAR:".localized) \(product.price ?? 0.0)"
         self.mainPriceLbl.isHidden = true
         self.mainPriceStrikeView.isHidden = true
         self.mainPriceStrikeView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.4)
@@ -379,8 +379,8 @@ extension ProductDetailVC {
         
         for object in product.custom_attributes {
             if object.attribute_code == "special_price" {
-                self.mainPriceLbl.text = "QAR: \(product.price ?? 0.0)"
-                self.discountPriceLbl.text = "QAR: \(Double(object.value ?? "0.0") ?? 0.0)"
+                self.mainPriceLbl.text = "\("QAR:".localized) \(product.price ?? 0.0)"
+                self.discountPriceLbl.text = "\("QAR:".localized) \(Double(object.value ?? "0.0".localized) ?? 0.0)"
                 self.mainPriceLbl.isHidden = false
                 self.mainPriceStrikeView.isHidden = false
                 return
@@ -401,13 +401,13 @@ extension ProductDetailVC {
                             let count = filtered[0].qty ?? 0
                             self.productQnt = count
                             self.quantityLbl.text = "\(count)"
-                            self.totalAmountLbl.text = "QAR:\((filtered[0].price ?? 0.0) * (Double(self.productQnt)))"
+                            self.totalAmountLbl.text = "\("QAR:".localized)\((filtered[0].price ?? 0.0) * (Double(self.productQnt)))"
                             self.quantityView.isHidden = false
                             self.addToCartBtn.isHidden = true
                         } else {
                             self.productQnt = 0
-                            self.quantityLbl.text = "0"
-                            self.totalAmountLbl.text = "QAR: 0.0"
+                            self.quantityLbl.text = "0".localized
+                            self.totalAmountLbl.text = "QAR: 0.0".localized
                             self.quantityView.isHidden = true
                             self.addToCartBtn.isHidden = false
                         }
@@ -439,7 +439,7 @@ extension ProductDetailVC {
                 self.cartItemId = item?.item_id
                 self.productQnt = item?.qty ?? 0
                 self.quantityLbl.text = "\(self.productQnt)"
-                self.totalAmountLbl.text = "QAR:\((item?.price ?? 0) * (Double(self.productQnt)))"
+                self.totalAmountLbl.text = "\("QAR:".localized)\((item?.price ?? 0) * (Double(self.productQnt)))"
                 self.addToCartBtn.isHidden = true
                 self.quantityView.isHidden = false
                 
@@ -460,7 +460,7 @@ extension ProductDetailVC {
                 self.cartItemId = item?.item_id
                 self.productQnt = item?.qty ?? 0
                 self.quantityLbl.text = "\(self.productQnt)"
-                self.totalAmountLbl.text = "QAR:\((item?.price ?? 0) * (Double(self.productQnt)))"
+                self.totalAmountLbl.text = "\("QAR:".localized)\((item?.price ?? 0) * (Double(self.productQnt)))"
                 self.addToCartBtn.isHidden = true
                 self.quantityView.isHidden = false
                 
@@ -491,9 +491,9 @@ extension ProductDetailVC {
             self.hideActivityIndicator(uiView: self.view)
             if (errorCode == APIHelper.apiResponseSuccessCode) {
                 let reviews = response?.reviews?.count ?? 0
-                print("Total Reviews: \(reviews)")
+                print("\("Total Reviews:".localized) \(reviews)")
                 if self.aboutProductArr.count == 3 {
-                    self.aboutProductArr[2] = AboutProduct(title: "Review", desc: "\(reviews) Reviews & Ratings")
+                    self.aboutProductArr[2] = AboutProduct(title: "Review".localized, desc: "\(reviews) \("Reviews & Ratings")")
                 }
                 self.aboutProductTblView.reloadData()
             }

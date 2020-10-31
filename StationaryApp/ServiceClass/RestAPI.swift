@@ -681,7 +681,7 @@ extension RestAPI {
                 if let message = result.message {
                     completion(nil, message, APIHelper.apiResponseErrorCode)
                 } else {
-                    completion(result, "Product Items Found", APIHelper.apiResponseSuccessCode)
+                    completion(result, "Product Items Found".localized, APIHelper.apiResponseSuccessCode)
                 }
             } else {
                 completion(nil, APIHelper.apiFailedMessage, APIHelper.apiFailedCode)
@@ -712,12 +712,12 @@ extension RestAPI {
 
             // make sure this JSON is in the format we expect
             if let _ = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                completion("Failed", APIHelper.apiResponseErrorCode)
+                completion("Failed".localized, APIHelper.apiResponseErrorCode)
             } else if let isTrue = String(data: data, encoding: String.Encoding.utf8) {
                 if isTrue == "true" {
-                    completion("Item removed from cart", APIHelper.apiResponseSuccessCode)
+                    completion("Item removed from cart".localized, APIHelper.apiResponseSuccessCode)
                 } else {
-                    completion("Failed", APIHelper.apiResponseErrorCode)
+                    completion("Failed".localized, APIHelper.apiResponseErrorCode)
                 }
             } else {
                 completion(APIHelper.apiFailedMessage, APIHelper.apiFailedCode)
@@ -787,7 +787,7 @@ extension RestAPI {
                 if let message = result.message {
                     completion(nil, message, APIHelper.apiResponseErrorCode)
                 } else {
-                    completion(result, "Products Found", APIHelper.apiResponseSuccessCode)
+                    completion(result, "Products Found".localized, APIHelper.apiResponseSuccessCode)
                 }
             } else {
                 completion(nil, APIHelper.apiFailedMessage, APIHelper.apiFailedCode)
@@ -824,7 +824,7 @@ extension RestAPI {
                     if let message = result.message {
                         completion(nil, message, APIHelper.apiResponseErrorCode)
                     } else {
-                        completion(nil, "Products Found", APIHelper.apiResponseSuccessCode)
+                        completion(nil, "Products Found".localized, APIHelper.apiResponseSuccessCode)
                     }
                 } else {
                     completion(nil, APIHelper.apiFailedMessage, APIHelper.apiFailedCode)

@@ -74,10 +74,10 @@ class BottomTabVC: UIViewController {
     
     func refreshCart() {
         let cartCount = UserDefaults.standard.string(forKey: Constant.UserDefaultKeys.cartCount) ?? "0"
-        self.cartCountLbl.text = cartCount
+        self.cartCountLbl.text = cartCount.localized
         self.getCartCount { (count) in
             UserDefaults.standard.setValue("\(count)", forKey: Constant.UserDefaultKeys.cartCount)
-            self.cartCountLbl.text = "\(count)"
+            self.cartCountLbl.text = "\(count)".localized
         }
     }
     

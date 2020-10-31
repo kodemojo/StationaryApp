@@ -178,7 +178,7 @@ extension MyCartVC {
                         self.scrollView.isHidden = false
                         self.nodataLbl.isHidden = true
 
-                        self.mycartProducts.text = "(\(arr.count) products)"
+                        self.mycartProducts.text = "(\(arr.count) \("products".localized)"
                         self.cartItems = arr
                         self.refreshTableView()
                         
@@ -230,7 +230,7 @@ extension MyCartVC {
                 let item = ProductItem(serverData: object)
                 arr.append(item)
             }
-            self.mycartProducts.text = "(\(arr.count) products)"
+            self.mycartProducts.text = "(\(arr.count) \("products".localized))"
             self.cartItems = arr
             self.refreshTableView()
             
@@ -252,12 +252,12 @@ extension MyCartVC {
             totalPrice += ((object.price ?? 0) * (Double(object.qty ?? 0)))
         }
         let count = self.cartItems.count
-        self.priceFixedLbl.text = "Price (\(count) item\(count > 1 ? "s" : ""))"
-        self.overallAmountLbl.text = "QAR: \(totalPrice)" //Total Cart Amount
-        self.priceLbl.text = "QAR: \(totalPrice)" //Price (items) Amount
-        self.deleveryLbl.text = "QAR: 0.0" //Delivery Charge
-        self.totalamountLbl.text = "QAR: \(totalPrice)" //Payable Amount
-        self.saveAmountLbl.text = "You will save QAR 0.0 on this order"
+        self.priceFixedLbl.text = "\("Products".localized) (\(count) item\(count > 1 ? "s" : ""))"
+        self.overallAmountLbl.text = "\("QAR:".localized) \(totalPrice)" //Total Cart Amount
+        self.priceLbl.text = "\("QAR:".localized) \(totalPrice)" //Price (items) Amount
+        self.deleveryLbl.text = "QAR: 0.0".localized //Delivery Charge
+        self.totalamountLbl.text = "\("QAR:".localized) \(totalPrice)" //Payable Amount
+        self.saveAmountLbl.text = "You will save QAR 0.0 on this order".localized
     }
    
     func executeForUpdateProductCountInCart(productSku: String, itemId: String, count: String) {

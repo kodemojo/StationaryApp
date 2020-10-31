@@ -56,13 +56,13 @@ class OrderDetailVC: BaseViewController {
         for item in self.orderItems {
             self.executeGetProductDetailAPI(productItem: item)
         }
-        self.priceItemFixedLbl.text = "Price(\(self.orderItems.count) items)"
+        self.priceItemFixedLbl.text = "\("Price".localized)(\(self.orderItems.count) items)"
         self.orderIdLbl.text = "#\(orderDetail.increment_id ?? "0")"
         
-        self.priceLbl.text = "QAR \(orderDetail.grand_total ?? 0.0)"
-        self.deliveryChargeLbl.text = "QAR 0.0"
-        self.promoCodeLbl.text = "QAR 0.0"
-        self.paybleBtn.text = "QAR \(orderDetail.grand_total ?? 0.0)"
+        self.priceLbl.text = "\("QAR".localized) \(orderDetail.grand_total ?? 0.0)"
+        self.deliveryChargeLbl.text = "\("QAR 0.0".localized)"
+        self.promoCodeLbl.text = "\("QAR 0.0".localized)"
+        self.paybleBtn.text = "\("QAR".localized) \(orderDetail.grand_total ?? 0.0)"
         self.pendingStatusLbl.text = orderDetail.paymentStatus ?? ""
         self.shippingMethodLbl.text = orderDetail.shippingDescription ?? ""
         

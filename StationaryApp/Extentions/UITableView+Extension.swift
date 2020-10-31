@@ -14,7 +14,7 @@ extension UITableView {
 //        var frame = self.bounds
 //        frame.size.height -= 50
         let label = UILabel(frame: self.bounds)
-        label.text = msg
+        label.text = msg.localized
         label.font = UIFont.systemFont(ofSize: 20.0, weight: .semibold)
         label.textColor = UIColor.darkGray
         label.textAlignment = .center
@@ -48,31 +48,31 @@ extension Date {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.timeZone = TimeZone.current
         guard let expDate = dateFormatter.date(from: dateFormatter.string(from: self)) else {
-            return  "0 secs"
+            return  "0 secs".localized
         }
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day, .weekday, .month, .year, .hour, .minute,.second], from: expDate, to: Date())
         var timeStr = ""
         if(components.year != 0) {
-            timeStr = "\(components.year ?? 1) \((components.year == 1) ?  "year" : "years")"
+            timeStr = "\(components.year ?? 1) \((components.year == 1) ?  "year".localized : "years".localized)"
         }
         else if(components.month != 0) {
-            timeStr = "\(components.month ?? 1) \((components.month == 1) ?  "month" : "months")"
+            timeStr = "\(components.month ?? 1) \((components.month == 1) ?  "month".localized : "months".localized)"
         }
         else if(components.weekday != 0) {
-            timeStr = "\(components.weekday ?? 1) \((components.weekday == 1) ?  "week" : "weeks")"
+            timeStr = "\(components.weekday ?? 1) \((components.weekday == 1) ?  "week" : "weeks".localized)"
         }
         else if(components.day != 0) {
-            timeStr = "\(components.day ?? 1) \((components.day == 1) ?  "day" : "days")"
+            timeStr = "\(components.day ?? 1) \((components.day == 1) ?  "day".localized : "days".localized)"
         }
         else if(components.hour != 0) {
-            timeStr = "\(components.hour ?? 1) \((components.hour == 1) ?  "hour" : "hours")"
+            timeStr = "\(components.hour ?? 1) \((components.hour == 1) ?  "hour".localized : "hours".localized)"
         }
         else if(components.minute != 0) {
-            timeStr = "\(components.minute ?? 1) \((components.minute == 1) ?  "min" : "mins")"
+            timeStr = "\(components.minute ?? 1) \((components.minute == 1) ?  "min".localized : "mins".localized)"
         }
         else if(components.second != 0) {
-            timeStr = "\(components.second ?? 1) \((components.second == 1) ?  "sec" : "secs")"
+            timeStr = "\(components.second ?? 1) \((components.second == 1) ?  "sec".localized : "secs".localized)"
         }
         return timeStr
     }

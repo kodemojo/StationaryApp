@@ -79,16 +79,16 @@ extension TutorialVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "TutoCollCell", for: indexPath) as! TutoCollCell
         if indexPath.row == 1 {
             cell.mainIV.image = UIImage(named: "tuto1")
-            cell.titleLbl.text = "Easy Purchase"
-            cell.descriptionLbl.text = "Find your favourite product that you\nwant to buy easily"
+            cell.titleLbl.text = "Easy Purchase".localized
+            cell.descriptionLbl.text = "Find your favourite product that you\nwant to buy easily".localized
         } else if indexPath.row == 2 {
             cell.mainIV.image = UIImage(named: "tuto2")
-            cell.titleLbl.text = "Safe Payment"
-            cell.descriptionLbl.text = "Pay for the products you buy safely\nand easily"
+            cell.titleLbl.text = "Safe Payment".localized
+            cell.descriptionLbl.text = "Pay for the products you buy safely\nand easily".localized
         } else { //3
             cell.mainIV.image = UIImage(named: "tuto3")
-            cell.titleLbl.text = "Fast Delivery"
-            cell.descriptionLbl.text = "Your products is delivered to your home\nsafely and securely"
+            cell.titleLbl.text = "Fast Delivery".localized
+            cell.descriptionLbl.text = "Your products is delivered to your home\nsafely and securely".localized
         }
         return cell
     }

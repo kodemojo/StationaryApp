@@ -26,10 +26,10 @@ class SearchVC: BaseViewController {
         searchBar.showsCancelButton = true
         searchBar.becomeFirstResponder()
         
-        productArr.append(Product1(isTrend: true, desc: "Office Stationary", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg1))
-        productArr.append(Product1(isTrend: true, desc: "School Supplies", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2))
-        productArr.append(Product1(isTrend: true, desc: "Env", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg3))
-        productArr.append(Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg4))
+        productArr.append(Product1(isTrend: true, desc: "Office Stationary".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg1))
+        productArr.append(Product1(isTrend: true, desc: "School Supplies".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg2))
+        productArr.append(Product1(isTrend: true, desc: "Env".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg3))
+        productArr.append(Product1(isTrend: true, desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.".localized, rating: 4.2, addToWish: false, img: ProjectImages.demoProjectImg4))
     }
     
     //MARK:-IBAction

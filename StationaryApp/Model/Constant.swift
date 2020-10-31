@@ -56,34 +56,36 @@ struct Constant {
         static let latitude             = "latitude"
         static let longitude            = "longitude"
         static let location             = "location"
+        
+        static let appleLanguages             = "AppleLanguages"
     }
 }
 
 /// All alert constant
 struct Alert {
-    static let NoNetwork = "No Internet Available!"
-    static let doLoginMessage = "Please do login to check your profile!"
+    static let NoNetwork = "No Internet Available!".localized
+    static let doLoginMessage = "Please do login to check your profile!".localized
     
-    static let emptyFirstName = "Please enter your first name"
-    static let emptyLastName = "Please enter your last name"
-    static let emptyEmail = "Please enter your email"
-    static let wrongEmail = "Email is not correct!"
-    static let emptyPassword = "Please enter your password"
-    static let emptyOldPassword = "Please enter your old password"
-    static let emptyNewPassword = "Please enter new password"
-    static let wrongPasswordLength = "Password must be minimum 8 characters"
-    static let wrongPassword = "Password should consist of lower case character, upper case character, digit and special symbol and mimimum 8 character."
-    static let emptyConfirmPassword = "Please enter confirm password"
-    static let wrongConfirmPassword = "Confirm password does not macthed!"
-    static let emptyFullName = "Please enter your name"
-    static let emptyMobile = "Please enter your mobile number"
-    static let wrongMobileLength = "Enter correct mobile number"
+    static let emptyFirstName = "Please enter your first name".localized
+    static let emptyLastName = "Please enter your last name".localized
+    static let emptyEmail = "Please enter your email".localized
+    static let wrongEmail = "Email is not correct!".localized
+    static let emptyPassword = "Please enter your password".localized
+    static let emptyOldPassword = "Please enter your old password".localized
+    static let emptyNewPassword = "Please enter new password".localized
+    static let wrongPasswordLength = "Password must be minimum 8 characters".localized
+    static let wrongPassword = "Password should consist of lower case character, upper case character, digit and special symbol and mimimum 8 character.".localized
+    static let emptyConfirmPassword = "Please enter confirm password".localized
+    static let wrongConfirmPassword = "Confirm password does not macthed!".localized
+    static let emptyFullName = "Please enter your name".localized
+    static let emptyMobile = "Please enter your mobile number".localized
+    static let wrongMobileLength = "Enter correct mobile number".localized
     
-    static let emptyBuildingNo = "Please enter building number"
-    static let emptyStreetNo = "Please enter street number"
-    static let emptyCountryName = "Please select country"
-    static let emptyZone = "Please enter zone name"
-    static let emptyZipcode = "Please enter your zipcode"
+    static let emptyBuildingNo = "Please enter building number".localized
+    static let emptyStreetNo = "Please enter street number".localized
+    static let emptyCountryName = "Please select country".localized
+    static let emptyZone = "Please enter zone name".localized
+    static let emptyZipcode = "Please enter your zipcode".localized
     
 }
 

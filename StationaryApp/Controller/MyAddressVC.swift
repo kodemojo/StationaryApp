@@ -58,11 +58,11 @@ extension MyAddressVC : UITableViewDelegate,UITableViewDataSource, AddressListAc
             vc.selectedAdd = self.addresses[index]
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-            let controller = UIAlertController(title: Constant.APP_NAME, message: "Are you sure want to delete this address?", preferredStyle: .alert)
-            controller.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) in
+            let controller = UIAlertController(title: Constant.APP_NAME, message: "Are you sure want to delete this address?".localized, preferredStyle: .alert)
+            controller.addAction(UIAlertAction(title: "Cancel".localized, style: .destructive, handler: { (action) in
                 controller.dismiss(animated: true, completion: nil)
             }))
-            controller.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action) in
+            controller.addAction(UIAlertAction(title: "Confirm".localized, style: .default, handler: { (action) in
                 controller.dismiss(animated: true, completion: nil)
                 var add = self.addresses
                 add.remove(at: index)

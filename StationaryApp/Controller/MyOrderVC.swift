@@ -32,13 +32,13 @@ class MyOrderVC: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if isMoveForRating {
-            self.hdrLbl.text = "Review & Rating"
+            self.hdrLbl.text = "Review & Rating".localized
             self.addReviewBtn.isHidden = false
             if checkInternet() {
                 self.executeForGetProductReviews(productSku: self.selectedProduct?.sku ?? "")
             }
         } else {
-            self.hdrLbl.text = "My Orders"
+            self.hdrLbl.text = "My Orders".localized
             self.addReviewBtn.isHidden = true
             if checkInternet() {
                 self.executeGetOrderListAPI()

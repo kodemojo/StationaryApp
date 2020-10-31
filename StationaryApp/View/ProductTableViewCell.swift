@@ -38,7 +38,7 @@ class ProductTableViewCell: UITableViewCell {
         }
         self.nameLbl.text = itemDetail.name ?? ""
         self.quantityLbl.text = "\(itemDetail.qty_ordered ?? 0)"
-        self.priceLbl.text = "QAR \(itemDetail.price ?? 0.0)"
+        self.priceLbl.text = "\("QAR".localized) \(itemDetail.price ?? 0.0)"
         
         let imageUrl = APIConstant.ImageMainUrl + (itemDetail.image ?? "")
         self.productIV.imageFromServerURL(imageUrl, placeHolder: UIImage(named: "logo"))

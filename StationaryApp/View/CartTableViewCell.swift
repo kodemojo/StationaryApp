@@ -48,10 +48,10 @@ class CartTableViewCell: UITableViewCell {
         }
         self.productsTitle.text = itemDetail.name ?? ""
         self.itemCountLbl.text = "\(itemDetail.qty ?? 0)"
-        self.priceLbl.text = "QAR \(itemDetail.price ?? 0.0)"
+        self.priceLbl.text = "\("QAR".localized) \(itemDetail.price ?? 0.0)"
         
-        self.removePriceLbl.text = "QAR 0.0"
-        self.discountLbl.text = "0% Off"
+        self.removePriceLbl.text = "QAR 0.0".localized
+        self.discountLbl.text = "0% Off".localized
         
         let imageMainUrl = APIConstant.ImageMainUrl + (itemDetail.image ?? "")
         self.productImg.imageFromServerURL(imageMainUrl, placeHolder: UIImage(named: "logo"))

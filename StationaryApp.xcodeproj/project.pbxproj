@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B682646254AFAEC00267D36 /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B682645254AFAEC00267D36 /* AppExtensions.swift */; };
+		4B682649254AFB6800267D36 /* AppGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B682648254AFB6800267D36 /* AppGlobals.swift */; };
 		4B83088325012B7D00990E7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B83088225012B7D00990E7F /* GoogleService-Info.plist */; };
+		4BA86DC4254AFF890027F4A7 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86DC3254AFF890027F4A7 /* ChangeLanguageVC.swift */; };
+		4BA86DD4254C1CB20027F4A7 /* LocalizableTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86DC7254C1CB10027F4A7 /* LocalizableTabBarItem.swift */; };
+		4BA86DD8254C1CB20027F4A7 /* LocalizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86DCC254C1CB10027F4A7 /* LocalizableButton.swift */; };
+		4BA86DDB254C1CB20027F4A7 /* LocalizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA86DCF254C1CB10027F4A7 /* LocalizableLabel.swift */; };
+		4BA86DE3254C1FEE0027F4A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BA86DE5254C1FEE0027F4A7 /* Localizable.strings */; };
 		4BD86B9224F50D9B00839780 /* QpayPayment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD86B9024F50D9500839780 /* QpayPayment.framework */; };
 		4BD86B9324F50D9B00839780 /* QpayPayment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD86B9024F50D9500839780 /* QpayPayment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69BD8CC71953A88AB6BE4031 /* Pods_StationaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B832E7A6CE9D1FDA9CABFB5B /* Pods_StationaryApp.framework */; };
@@ -139,7 +146,15 @@
 /* Begin PBXFileReference section */
 		33BB82DA32931DC4FFB4E768 /* Pods-StationaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StationaryApp.debug.xcconfig"; path = "Target Support Files/Pods-StationaryApp/Pods-StationaryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4B3291B9250DDAD2002A6433 /* Al Rawnaq.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Al Rawnaq.entitlements"; sourceTree = "<group>"; };
+		4B682645254AFAEC00267D36 /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		4B682648254AFB6800267D36 /* AppGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobals.swift; sourceTree = "<group>"; };
 		4B83088225012B7D00990E7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4BA86DC3254AFF890027F4A7 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
+		4BA86DC7254C1CB10027F4A7 /* LocalizableTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableTabBarItem.swift; sourceTree = "<group>"; };
+		4BA86DCC254C1CB10027F4A7 /* LocalizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableButton.swift; sourceTree = "<group>"; };
+		4BA86DCF254C1CB10027F4A7 /* LocalizableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableLabel.swift; sourceTree = "<group>"; };
+		4BA86DE4254C1FEE0027F4A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4BA86DE6254C20180027F4A7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4BD86B9024F50D9500839780 /* QpayPayment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QpayPayment.framework; sourceTree = "<group>"; };
 		8401560C24A0B1590080F340 /* ReviewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTblCell.swift; sourceTree = "<group>"; };
 		8401560D24A0B1590080F340 /* ReviewTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTblCell.xib; sourceTree = "<group>"; };
@@ -272,6 +287,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B682647254AFB4900267D36 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				4BA86DC5254C1CB10027F4A7 /* Subclasses */,
+				4B682645254AFAEC00267D36 /* AppExtensions.swift */,
+				4B682648254AFB6800267D36 /* AppGlobals.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		4BA86DC5254C1CB10027F4A7 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				4BA86DC7254C1CB10027F4A7 /* LocalizableTabBarItem.swift */,
+				4BA86DCC254C1CB10027F4A7 /* LocalizableButton.swift */,
+				4BA86DCF254C1CB10027F4A7 /* LocalizableLabel.swift */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
 		4DBB869230BC478F675911B4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +488,7 @@
 		8490E17823A11CBD00DF537D /* StationaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B682647254AFB4900267D36 /* Others */,
 				4B3291B9250DDAD2002A6433 /* Al Rawnaq.entitlements */,
 				84D33E3C24B4A8DF00AF7179 /* splash.png */,
 				84FE63F624C86BC90040C9FF /* background.jpg */,
@@ -471,6 +507,7 @@
 				8490E18723A11CBF00DF537D /* LaunchScreen.storyboard */,
 				8490E18A23A11CBF00DF537D /* Info.plist */,
 				8490E18223A11CBD00DF537D /* StationaryApp.xcdatamodeld */,
+				4BA86DE5254C1FEE0027F4A7 /* Localizable.strings */,
 			);
 			path = StationaryApp;
 			sourceTree = "<group>";
@@ -546,6 +583,7 @@
 				EC0D0E3E23B6303D00F7C72F /* MyCartVC.swift */,
 				84B158F523B48C62003E8849 /* MyProfileVC.swift */,
 				84F0691C24977C14000D3659 /* CountryPickerVC.swift */,
+				4BA86DC3254AFF890027F4A7 /* ChangeLanguageVC.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -635,6 +673,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 8490E16D23A11CBD00DF537D;
 			productRefGroup = 8490E17723A11CBD00DF537D /* Products */;
@@ -668,6 +707,7 @@
 				843BEEA62488E6B0005B2F11 /* CustomDatePicker.xib in Resources */,
 				8490E18623A11CBF00DF537D /* Assets.xcassets in Resources */,
 				8490E18123A11CBD00DF537D /* Main.storyboard in Resources */,
+				4BA86DE3254C1FEE0027F4A7 /* Localizable.strings in Resources */,
 				8471CDC623B34CE5003CB9F0 /* Poppins-ExtraBold.ttf in Resources */,
 				8471CDC923B34CE5003CB9F0 /* Poppins-SemiBold.ttf in Resources */,
 				84FE63F924C86BD70040C9FF /* applogoNew.png in Resources */,
@@ -780,9 +820,11 @@
 				84606F2524B72AB50031A281 /* ContactUsVC.swift in Sources */,
 				84B1591A23B49493003E8849 /* TweeAttributedTextField.swift in Sources */,
 				843BEEB52488E6B0005B2F11 /* UIViewController+Extension.swift in Sources */,
+				4BA86DD8254C1CB20027F4A7 /* LocalizableButton.swift in Sources */,
 				8490E18423A11CBD00DF537D /* StationaryApp.xcdatamodeld in Sources */,
 				84A9A0FF23B603D40096B699 /* HeaderCollectionReusableView.swift in Sources */,
 				84B158FC23B48DD0003E8849 /* AddNewAddressVC.swift in Sources */,
+				4BA86DDB254C1CB20027F4A7 /* LocalizableLabel.swift in Sources */,
 				84B1592D23B4BA69003E8849 /* OTPVerifyVC.swift in Sources */,
 				84B1591923B49493003E8849 /* TweeActiveTextField.swift in Sources */,
 				8490E17A23A11CBD00DF537D /* AppDelegate.swift in Sources */,
@@ -822,22 +864,35 @@
 				84588EF723B20FB7000C6678 /* ProductListReusableCell.swift in Sources */,
 				84E7E41023B0D25D00B93823 /* ProductCell.swift in Sources */,
 				84B1592623B49504003E8849 /* PromocodeTableViewCell.swift in Sources */,
+				4BA86DC4254AFF890027F4A7 /* ChangeLanguageVC.swift in Sources */,
 				843BEEAB2488E6B0005B2F11 /* MALayerButton.swift in Sources */,
 				84588EFB23B219A9000C6678 /* DealsVC.swift in Sources */,
 				843BEEA92488E6B0005B2F11 /* Extention_UIView.swift in Sources */,
+				4BA86DD4254C1CB20027F4A7 /* LocalizableTabBarItem.swift in Sources */,
 				843BEE9D2488E6B0005B2F11 /* APIConstant.swift in Sources */,
+				4B682649254AFB6800267D36 /* AppGlobals.swift in Sources */,
 				84565277248A66B4004E9316 /* CategoryVC.swift in Sources */,
 				843BEEA72488E6B0005B2F11 /* Extention_PageControl.swift in Sources */,
 				84C72B4A23A20EC200BE276F /* SideMenuVC.swift in Sources */,
 				84C72B4D23A2190600BE276F /* SideMenuCell.swift in Sources */,
 				84B1591B23B49493003E8849 /* TweeBorderedTextField.swift in Sources */,
 				84B158FE23B48E24003E8849 /* MyOrderVC.swift in Sources */,
+				4B682646254AFAEC00267D36 /* AppExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4BA86DE5254C1FEE0027F4A7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BA86DE4254C1FEE0027F4A7 /* en */,
+				4BA86DE6254C20180027F4A7 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8490E17F23A11CBD00DF537D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -861,6 +916,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -921,6 +977,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -979,7 +1036,7 @@
 				CODE_SIGN_ENTITLEMENTS = "StationaryApp/Al Rawnaq.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6HCV7UR2JJ;
 				ENABLE_BITCODE = NO;
@@ -1013,7 +1070,7 @@
 				CODE_SIGN_ENTITLEMENTS = "StationaryApp/Al Rawnaq.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6HCV7UR2JJ;
 				ENABLE_BITCODE = NO;

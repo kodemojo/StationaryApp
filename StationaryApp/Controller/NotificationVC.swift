@@ -15,7 +15,7 @@ class NotificationVC: BaseViewController {
     
     
     //MARK:- Variable
-    var orderTitle = ["Order placed successfully !","Order arrived soon"]
+    var orderTitle = ["Order placed successfully !".localized,"Order arrived soon".localized]
     var orderDescription = ["",""]
     
     override func viewDidLoad() {
