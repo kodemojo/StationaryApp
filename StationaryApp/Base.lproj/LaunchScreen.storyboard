@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,27 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qZz-ES-ED8">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgc" translatesAutoresizingMaskIntoConstraints="NO" id="HES-8b-Buh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applogoNew.png" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-4p-AVS">
-                                <rect key="frame" x="62" y="303" width="290" height="290"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applogoN" translatesAutoresizingMaskIntoConstraints="NO" id="pzg-IZ-fLF">
+                                <rect key="frame" x="20" y="261" width="374" height="374"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="i1L-4p-AVS" secondAttribute="height" multiplier="1:1" id="gwH-UM-naw"/>
+                                    <constraint firstAttribute="width" secondItem="pzg-IZ-fLF" secondAttribute="height" multiplier="1:1" id="L6h-Ap-4cB"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="qZz-ES-ED8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="8H6-M8-4Yy"/>
-                            <constraint firstItem="i1L-4p-AVS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8MD-vF-DQz"/>
-                            <constraint firstItem="i1L-4p-AVS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8jC-6p-tRq"/>
-                            <constraint firstItem="qZz-ES-ED8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="9xg-L6-zQi"/>
-                            <constraint firstAttribute="trailing" secondItem="qZz-ES-ED8" secondAttribute="trailing" id="HCN-By-xoE"/>
-                            <constraint firstAttribute="bottom" secondItem="qZz-ES-ED8" secondAttribute="bottom" id="MgE-7n-kIb"/>
-                            <constraint firstItem="i1L-4p-AVS" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="u1m-ft-bdA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.063420526680000006" green="0.87992072109999997" blue="0.1014167592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="pzg-IZ-fLF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="13E-BJ-8Jz"/>
+                            <constraint firstAttribute="bottom" secondItem="HES-8b-Buh" secondAttribute="bottom" id="3cN-4K-eWB"/>
+                            <constraint firstItem="HES-8b-Buh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4X9-He-y53"/>
+                            <constraint firstAttribute="trailing" secondItem="pzg-IZ-fLF" secondAttribute="trailing" constant="20" symbolic="YES" id="NFS-ch-1B2"/>
+                            <constraint firstItem="HES-8b-Buh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q66-1x-ESU"/>
+                            <constraint firstItem="pzg-IZ-fLF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XJZ-Ub-OLA"/>
+                            <constraint firstItem="pzg-IZ-fLF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ajp-Jj-aEW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HES-8b-Buh" secondAttribute="trailing" id="l2u-wK-Ol9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -45,7 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="applogoNew.png" width="750" height="1334"/>
-        <image name="background.jpg" width="750" height="1334"/>
+        <image name="applogoN" width="375" height="667"/>
+        <image name="bgc" width="375" height="667"/>
     </resources>
 </document>

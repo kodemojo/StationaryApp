@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTI-hZ-Dud">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0f-dk-GTa">
+                        <button customClass="LocalizableButton" customModule="Al_Rawnaq" customModuleProvider="target" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0f-dk-GTa">
                             <rect key="frame" x="220" y="0.0" width="100" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="tOK-Ys-xky"/>

@@ -24,6 +24,7 @@ class LocalizableLabel: UILabel
     
     func commonInit()
     {
+        print("Returning \(self.text)")
         self.text = self.text?.localized
     }
 

@@ -28,7 +28,7 @@
                         <constraint firstAttribute="height" constant="15" id="zqv-E5-7kJ"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sweden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dia-wo-OOX">
+                <label customClass="LocalizableLabel" customModule="Al_Rawnaq" customModuleProvider="target" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sweden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dia-wo-OOX">
                     <rect key="frame" x="67" y="11" width="176" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="nis-FU-EGz"/>
@@ -37,7 +37,7 @@
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3C-bM-CyA">
+                <label customClass="LocalizableLabel" customModule="Al_Rawnaq" customModuleProvider="target" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3C-bM-CyA">
                     <rect key="frame" x="258" y="11" width="32" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Tka-nd-8LF"/>

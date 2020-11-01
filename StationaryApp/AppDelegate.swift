@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        Thread.sleep(forTimeInterval: 1.0)
+        //Thread.sleep(forTimeInterval: 1.0)
         // Use the Firebase library to configure APIs.
         FirebaseApp.configure()
         registerPushNotifications(application)
