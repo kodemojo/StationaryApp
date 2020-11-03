@@ -17,6 +17,7 @@
 		4BA86DE3254C1FEE0027F4A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BA86DE5254C1FEE0027F4A7 /* Localizable.strings */; };
 		4BA86E37254DD2960027F4A7 /* bgc.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BA86E36254DD2950027F4A7 /* bgc.png */; };
 		4BA86E39254DD2BD0027F4A7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BA86E38254DD2BD0027F4A7 /* background.jpg */; };
+		4BA86E3D254EC5260027F4A7 /* abc.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BA86E3C254EC5260027F4A7 /* abc.txt */; };
 		4BD86B9224F50D9B00839780 /* QpayPayment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD86B9024F50D9500839780 /* QpayPayment.framework */; };
 		4BD86B9324F50D9B00839780 /* QpayPayment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD86B9024F50D9500839780 /* QpayPayment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69BD8CC71953A88AB6BE4031 /* Pods_StationaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B832E7A6CE9D1FDA9CABFB5B /* Pods_StationaryApp.framework */; };
@@ -158,6 +159,7 @@
 		4BA86DE6254C20180027F4A7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4BA86E36254DD2950027F4A7 /* bgc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgc.png; sourceTree = "<group>"; };
 		4BA86E38254DD2BD0027F4A7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		4BA86E3C254EC5260027F4A7 /* abc.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = abc.txt; sourceTree = "<group>"; };
 		4BD86B9024F50D9500839780 /* QpayPayment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QpayPayment.framework; sourceTree = "<group>"; };
 		8401560C24A0B1590080F340 /* ReviewTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTblCell.swift; sourceTree = "<group>"; };
 		8401560D24A0B1590080F340 /* ReviewTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTblCell.xib; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				4BA86DC5254C1CB10027F4A7 /* Subclasses */,
 				4B682645254AFAEC00267D36 /* AppExtensions.swift */,
 				4B682648254AFB6800267D36 /* AppGlobals.swift */,
+				4BA86E3C254EC5260027F4A7 /* abc.txt */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				8401560F24A0B1590080F340 /* ReviewTblCell.xib in Resources */,
 				8471CDCF23B34CE5003CB9F0 /* Poppins-MediumItalic.ttf in Resources */,
 				843BEEA62488E6B0005B2F11 /* CustomDatePicker.xib in Resources */,
+				4BA86E3D254EC5260027F4A7 /* abc.txt in Resources */,
 				8490E18623A11CBF00DF537D /* Assets.xcassets in Resources */,
 				4BA86E39254DD2BD0027F4A7 /* background.jpg in Resources */,
 				8490E18123A11CBD00DF537D /* Main.storyboard in Resources */,

@@ -28,3 +28,29 @@ extension String {
     }
     
 }
+
+
+
+
+
+//
+//if let url = Bundle.main.url(forResource: "abc", withExtension: ".txt") {
+//    let text2 = try? String(contentsOf: url, encoding: .utf8)
+//    
+//    let regex = try? NSRegularExpression(pattern: "text=\"(.*?)\"")
+//    let results = regex!.matches(in: text2!,
+//                                range: NSRange(text2!.startIndex..., in: text2!))
+//    
+//    var mainString = ""
+//    
+//    for rang in results {
+//        var s = String(text2![Range(rang.range, in: text2!)!])
+//        s = s.replacingOccurrences(of: "text=", with: "")
+//        s = s.replacingOccurrences(of: "\"", with: "")
+//        mainString = mainString + "\n" + s
+//    }
+//    
+//    print(mainString)
+//    
+//    
+//}

@@ -27,10 +27,10 @@ class SideMenuVC: BaseViewController {
         self.tblView.delegate = self
         self.tblView.dataSource = self
         
-        imgArr.append(model(img: ProjectImages.my_address, name: "My Address"))
-        imgArr.append(model(img: ProjectImages.orders, name: "My Order's"))
+        imgArr.append(model(img: ProjectImages.my_address, name: "My Address".localized))
+        imgArr.append(model(img: ProjectImages.orders, name: "My Order's".localized))
 //        imgArr.append(model(img: ProjectImages.my_wishlist, name: "My Wishlist"))
-        imgArr.append(model(img: ProjectImages.my_wishlist, name: "Brands"))
+        imgArr.append(model(img: ProjectImages.my_wishlist, name: "Brands".localized))
         //imgArr.append(model(img: ProjectImages.my_wishlist, name: "Deals"))
 //        imgArr.append(model(img: ProjectImages.promocodes, name: "Promocode / GiftVoucher's"))
 //        imgArr.append(model(img: ProjectImages.returnPolicy, name: "Return Policy"))
@@ -38,14 +38,14 @@ class SideMenuVC: BaseViewController {
 //        imgArr.append(model(img: nil, name: "Shipping Policy"))
 //        imgArr.append(model(img: nil, name: "Warranty policy"))
 //        imgArr.append(model(img: nil, name: "Privacy Policy"))
-        imgArr.append(model(img: nil, name: "Terms & Conditions"))
-        imgArr.append(model(img: nil, name: "About Us"))
-        imgArr.append(model(img: nil, name: "Contact Us"))
-        imgArr.append(model(img: nil, name: "Change Language"))
+        imgArr.append(model(img: nil, name: "Terms & Conditions".localized))
+        imgArr.append(model(img: nil, name: "About Us".localized))
+        imgArr.append(model(img: nil, name: "Contact Us".localized))
+        imgArr.append(model(img: nil, name: "Change Language".localized))
         if isLogged {
-            imgArr.append(model(img: nil, name: "Logout"))
+            imgArr.append(model(img: nil, name: "Logout".localized))
         } else {
-            imgArr.append(model(img: nil, name: "Login"))
+            imgArr.append(model(img: nil, name: "Login".localized))
         }
     }
     
